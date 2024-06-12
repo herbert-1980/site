@@ -62,6 +62,7 @@ THIRD_APPS = [
     "corsheaders",
 ]
 PROJECT_APPS = [
+    'apps.accounts',
     'apps.base',
     'apps.pages',
 ]
@@ -103,6 +104,8 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'core.wsgi.application'
 
+# Tipo de autenticação usada
+AUTH_USER_MODEL = "accounts.MyUser"
 
 # Banco de Dados.
 DATABASES = {
