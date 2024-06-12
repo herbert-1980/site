@@ -71,6 +71,7 @@ INSTALLED_APPS = DJANGO_APPS + THIRD_APPS + PROJECT_APPS
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django_session_timeout.middleware.SessionTimeoutMiddleware', # Timeout
     'corsheaders.middleware.CorsMiddleware', # Cors
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -166,6 +167,16 @@ REQUESTLOGS = {
     'SECRETS': ['password', 'token'],
     'METHODS': ('PUT', 'PATCH', 'POST', 'DELETE'),
 }
+
+# timeout tempo de inatividate no sistema
+SESSION_EXPIRE_SECONDS = 1800 # 30 minutos logado
+SESSION_EXPIRE_AFTER_LAST_ACTIVITY = True
+#SESSION_EXPIRE_AFTER_LAST_ACTIVITY_GRACE_PERIOD = 60  
+SESSION_TIMEOUT_REDIRECT = 'http://localhost:8000/accounts/timeout/'
+
+LOGIN_URL = 'login'
+LOGIN_REDIRECT = '/'
+LOGOUT_REDIRECT = '/'
 
 # Internationalization
 # Se quiser deixar em Português
