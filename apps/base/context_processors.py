@@ -19,6 +19,16 @@ def context_horario(request):
     # Retorna um dicionário com a data e hora formatadas
     return {'horario': f"Agora é exatamente: {horario_formatado}"}
 
+#Imprime somente a data
+def context_ano(request):
+    # Obtém a data e hora atual
+    ano = timezone.now()
+
+    # Formata a data e hora em uma string legível
+    ano_formatado = ano.strftime("%Y-%m-%d %H:%M:%S")
+
+    # Retorna um dicionário com a data e hora formatadas
+    return {'ano': f"Copyright© {ano_formatado}"}
 # Imprime o Ip do usuario
 """
 def ip_address_processor(request):
