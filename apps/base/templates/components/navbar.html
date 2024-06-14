@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg bg-light" style="height: 70px;">
     <div class="container-fluid bg-light">
-        <a class="navbar-brand" href="/">EmpresaABC</a>
+        <a class="navbar-brand" href="/">..::Coophavila News::..</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -26,6 +26,8 @@
             </form>
             
                 {% if user.is_authenticated %}
+                    <button type="button" class="btn btn-light" aria-current="true" onclick="location.href='{% url 'painel' %}'">
+                    <i class="fas fa-tachometer-alt me-2"></i>Painel</button>
                 <span class="p-2">
                     <a class="nav-link" href="{% url 'perfil' user.username %}">
                 <i class="fas fa-user mx-2"></i>{{user.first_name}} {{user.last_name}}</a>

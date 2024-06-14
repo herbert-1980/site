@@ -64,6 +64,7 @@ THIRD_APPS = [
 ]
 PROJECT_APPS = [
     'apps.base',
+    'apps.config',
     'apps.pages',
     'apps.perfil',
 ]

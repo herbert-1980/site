@@ -1,4 +1,11 @@
 .venv/
 .env/
+*.log
+*.pot
+*.pyc
+__pycache__/
+local_settings.py
+settings.py
 db.sqlite3
-info.log
+db.sqlite3-journal
+media
