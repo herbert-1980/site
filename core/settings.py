@@ -51,6 +51,7 @@ if not DEBUG:
 
 # Aplicativos do django
 DJANGO_APPS = [
+    'apps.accounts',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -62,7 +63,6 @@ THIRD_APPS = [
     "corsheaders",
 ]
 PROJECT_APPS = [
-    'apps.accounts',
     'apps.base',
     'apps.pages',
 ]
@@ -178,12 +178,14 @@ LOGIN_URL = 'login'
 LOGIN_REDIRECT = '/'
 LOGOUT_REDIRECT = '/'
 
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
 # Internationalization
 # Se quiser deixar em Português
 
 LANGUAGE_CODE = 'pt-BR'
 
-TIME_ZONE = 'America/Campo_Grande'
+TIME_ZONE = 'America/Sao_Paulo'
 
 USE_I18N = True
 
